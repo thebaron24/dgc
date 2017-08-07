@@ -1,6 +1,6 @@
-# Webpack-Scaffolding
+# Material-Handlebars
 
-This is a seed project for building web applications with [webpack](https://webpack.js.org/).
+This is a seed project for building web applications using [webpack](https://webpack.js.org/), [handlebars](http://handlebarsjs.com/), and [material design lite](https://github.com/google/material-design-lite).
 
 ## Dependencies
 
@@ -8,7 +8,7 @@ This is an npm package that relies on you having [nodejs with npm](https://nodej
 
 ## Install
 
-In the node command prompt navigate to a folder you want to clone the repo into. Clone the repo with `git clone <prefered repo link> <optional repo name>` to download the repo into a folder name webpack scaffolding or the optional repo name you chose when cloning. Then, `cd <webpack-scaffolding or optional repo name>` to move into the repository folder. To install the dependencies just `npm i`.
+In the node command prompt navigate to a folder you want to clone the repo into. Clone the repo with `git clone <prefered repo link> <optional repo name>` to download the repo into a folder name material-handlebars or the optional repo name you chose when cloning. Then, `cd <material-handlebars or optional repo name>` to move into the repository folder. To install the dependencies just `npm i`.
 
 ## Build
 
