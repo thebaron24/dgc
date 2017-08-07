@@ -2,6 +2,7 @@ var path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 const webpack = require("webpack");
 
 module.exports = {
@@ -51,8 +52,10 @@ module.exports = {
 					]
 				})
 			},
-			{ test: /\.handlebars$/, loader: "handlebars-loader" },
-			{ test: /\.js$/, loader: 'exports-loader' }
+			{	test: /\.handlebars$/, loader: "handlebars-loader" },
+			{	test: /\.js$/, loader: 'exports-loader' },
+			{	test: /\.(png|svg|jpg|gif)$/, use: ['file-loader'] },
+			{	test: /\.(woff|woff2|eot|ttf|otf)$/, loader: 'file-loader?publicPath=../&name=fonts/[name].[ext]' }
 		]
 	},
 	plugins: [
@@ -63,6 +66,12 @@ module.exports = {
 		new ExtractTextPlugin({
 			filename:  (getPath) => {
 				return getPath('css/[name].[hash].css').replace('css/js', 'css');
+			},
+			allChunks: true
+		}),
+		new ExtractTextPlugin({
+			filename:  (getPath) => {
+				return getPath('fonts/[name].[hash].[ext]').replace('fonts/js', 'fonts');
 			},
 			allChunks: true
 		}),
