@@ -1,6 +1,6 @@
 # Material-Handlebars
 
-This is a seed project for building web applications using [webpack](https://webpack.js.org/), [handlebars](http://handlebarsjs.com/), and [material design lite](https://github.com/google/material-design-lite).
+This is a seed project for building web applications using [webpack](https://webpack.js.org/), [handlebars](http://handlebarsjs.com/), and [material-components-web](https://github.com/material-components/material-components-web).
 
 ## Dependencies
 

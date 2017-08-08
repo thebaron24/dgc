@@ -19,7 +19,7 @@ module.exports = {
 		],
 		extensions: [".js", ".json",".scss", ".handlebars"]
 	},
-	devtool : 'source-map',
+	// devtool : 'source-map',
 	module: {
 		rules: [
 			{
