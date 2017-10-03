@@ -1,9 +1,8 @@
-@import "~material-components-web/material-components-web";
-
 $mdc-theme-primary: #fafafa;
-$mdc-theme-accent: #78909c;
+$mdc-theme-secondary: #78909c;
 $mdc-theme-background: #fff;
-@import "@material/theme/mdc-theme";
+
+@import "~material-components-web/material-components-web";
 
 @font-face {
   font-family: 'Material Icons';
@@ -29,7 +28,7 @@ $mdc-theme-background: #fff;
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-
+  
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
