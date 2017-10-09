@@ -1,33 +1,26 @@
 import styles from 'styles';
-import {MDCPersistentDrawer, MDCPersistentDrawerFoundation, util} from '@material/drawer';
-
-var Template = require("./templates/template.handlebars");
+import {MDCTemporaryDrawer, MDCTemporaryDrawerFoundation, util} from '@material/drawer';
+import Template from './templates/template.handlebars';
 var app;
 
-function AppComponent() {
-	app = document.createElement('div');
-	app.id = "app";
-	app.className = "mdc-typography";
-	app.innerHTML = Template({});
-	document.body.className = "";
-	document.body.appendChild(app);
+const config = {};
 
-  let drawerEl = document.querySelector('.mdc-persistent-drawer');
-  let menu = document.querySelector('.menu');
-  const drawer = new MDCPersistentDrawer(drawerEl);
+var AppComponent = () => {
+  app = document.createElement('div');
+  app.id = "app";
+  app.className = "mdc-typography";
+  app.innerHTML = Template(config);
+  document.body.className = "";
+  document.body.appendChild(app);
 
-  // var drawerEl = document.querySelector('.mdc-persistent-drawer');
+    let drawerEl = document.querySelector('.mdc-temporary-drawer');
+    let drawer = new MDCTemporaryDrawer(drawerEl);
+    let menu = document.querySelector('.menu');
+    menu.addEventListener('click', () => drawer.open = !drawer.open);
 
-  // let drawer = new mdc.drawer.MDCPersistentDrawer(drawerEl);
-  menu.addEventListener('click', () => drawer.open = !drawer.open);
-
-  //event hooks
-  drawerEl.addEventListener('MDCPersistentDrawer:open', function() {
-    console.log('Received MDCPersistentDrawer:open');
-  });
-  drawerEl.addEventListener('MDCPersistentDrawer:close', function() {
-    console.log('Received MDCPersistentDrawer:close');
-  });
+    //event hooks
+    drawerEl.addEventListener('MDCTemporaryDrawer:open', () => console.log('Received MDCPersistentDrawer:open'));
+    drawerEl.addEventListener('MDCTemporaryDrawer:close', () => console.log('Received MDCPersistentDrawer:close'));
 }
 
 AppComponent();

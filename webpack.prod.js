@@ -5,7 +5,10 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = {
-	entry: './src/index.js',
+	entry: {
+		polyfill: "babel-polyfill",
+		app: './src/index.js'
+	},
 	output: {
 		filename: 'js/[name].bundle.[hash].js',
 		path: path.resolve(__dirname, 'dist')
@@ -15,7 +18,7 @@ module.exports = {
 			path.resolve(__dirname, "src"),
 			path.resolve(__dirname, "src/scss/"),
 			path.resolve(__dirname, "src/templates/"),
-			"node_modules"
+			path.resolve(__dirname, "node_modules")
 		],
 		extensions: [".js", ".json",".scss", ".handlebars"]
 	},
@@ -54,14 +57,20 @@ module.exports = {
 			},
 			{	test: /\.handlebars$/, loader: "handlebars-loader" },
 			{
-		      	test: /\.js$/,
-		      	use: {
-		        	loader: 'babel-loader',
-		        	options: {
-		          		presets: ['env']
-		        	}
-		      	}
-		    },
+			    test: /\.js$/,
+			    use: {
+			        loader: 'babel-loader',
+			        options: {
+				        presets: [
+						    ["env", {
+						      "targets": {
+						        "browsers": ["last 2 versions"]
+						      }
+						    }]
+						]
+			        }
+			    }
+			},
 			{	test: /\.(png|svg|jpg|gif)$/, use: ['file-loader'] },
 			{	test: /\.(woff|woff2|eot|ttf|otf)$/, loader: 'file-loader?publicPath=../&name=fonts/[name].[ext]' }
 		]
