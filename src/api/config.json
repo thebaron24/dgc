@@ -1,0 +1,53 @@
+{
+	"site": "Diversity Group Consulting",
+	"menuIcon": "menu",
+	"location" : "index",
+	"pages": {
+		"index": {
+			"title": "Diversity Group Consulting",
+			"menu": {
+				"name": "Home",
+				"path": "http://localhost:2400",
+				"icon": "star",
+				"iconClass": "material-icons mdc-list-item__start-detail",
+				"element": "a",
+				"class": "mdc-list-item"
+			},
+			"content": [
+				{
+					"element": "h1",
+					"class": "mdc-typography--display1",
+					"text": "Diversity Group Consulting"
+				},
+				{
+					"element": "p",
+					"class": "mdc-typography--body1",
+					"text": "Webpack material scaffolding is working as expected"
+				}
+			]
+		},
+		"contact": {
+			"title": "Contact Information - Diversity Group Consulting",
+			"menu": {
+				"name": "Contact",
+				"path": "/contact",
+				"icon": "report",
+				"iconClass": "material-icons mdc-list-item__start-detail",
+				"element": "a",
+				"class": "mdc-list-item"
+			},
+			"content": [
+				{
+					"element": "h1",
+					"class": "mdc-typography--display1",
+					"text": "Contact us for more information"
+				},
+				{
+					"element": "p",
+					"class": "mdc-typography--body1",
+					"text": "Contact information here"
+				}
+			]
+		}
+	}
+}

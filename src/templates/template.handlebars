@@ -9,52 +9,121 @@
 
     <div class="mdc-list-group">
       <nav class="mdc-list">
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
-        </a>
+        {{#each this.pages}}
+          {{!-- Key: {{@key}} --}}
+          <{{this.menu.element}} class="{{this.menu.class}}" href="{{this.menu.path}}">
+            <i class="{{this.menu.iconClass}}" aria-hidden="true">{{this.menu.icon}}</i>{{this.menu.name}}
+          </{{this.menu.element}}>
+        {{/each}}
       </nav>
 
       <hr class="mdc-list-divider">
 
-      <nav class="mdc-list">
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
-          </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
-          </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
-          </a>
-        </nav>
-      </div>
+    </div>
 
   </nav>
 </aside>
 
-<div class="content">
+<section>
 
-  <header class="mdc-toolbar mdc-elevation--z4">
+  <header class="mdc-toolbar mdc-toolbar--fixed">
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-        <button class="menu material-icons mdc-toolbar__icon--menu">menu</button>
-        <span class="mdc-toolbar__title catalog-title">Single Page</span>
+        <button class="menu material-icons mdc-toolbar__icon--menu">{{this.menuIcon}}</button>
+        <span class="mdc-toolbar__title">{{this.site}}</span>
       </section>
     </div>
   </header>
 
-  <main class="main">
-    <h1 class="mdc-typography--display1">Single Page</h1>
-    <p class="mdc-typography--body1">Click the menu icon above to open and close the drawer.</p>
+  <main class="mdc-toolbar-fixed-adjust">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="mdc-card mdc-card--theme-dark">
+            <section class="mdc-card__primary">
+              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+              <h2 class="mdc-card__subtitle">Subtitle here</h2>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
+            </section>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <div class="mdc-card mdc-card--theme-dark">
+            <section class="mdc-card__primary">
+              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+              <h2 class="mdc-card__subtitle">Subtitle here</h2>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
+            </section>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <div class="mdc-card mdc-card--theme-dark">
+            <section class="mdc-card__primary">
+              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+              <h2 class="mdc-card__subtitle">Subtitle here</h2>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
+            </section>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <div class="mdc-card mdc-card--theme-dark">
+            <section class="mdc-card__primary">
+              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+              <h2 class="mdc-card__subtitle">Subtitle here</h2>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
+            </section>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <div class="mdc-card mdc-card--theme-dark">
+            <section class="mdc-card__primary">
+              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+              <h2 class="mdc-card__subtitle">Subtitle here</h2>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
+            </section>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <div class="mdc-card mdc-card--theme-dark">
+            <section class="mdc-card__primary">
+              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+              <h2 class="mdc-card__subtitle">Subtitle here</h2>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
+            </section>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <div class="mdc-card mdc-card--theme-dark">
+            <section class="mdc-card__primary">
+              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+              <h2 class="mdc-card__subtitle">Subtitle here</h2>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
+              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   
-</div>
+</section>

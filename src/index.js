@@ -3,7 +3,7 @@ import {MDCTemporaryDrawer, MDCTemporaryDrawerFoundation, util} from '@material/
 import Template from './templates/template.handlebars';
 var app;
 
-const config = {};
+import config from './api/config.json';
 
 var AppComponent = () => {
   app = document.createElement('div');
@@ -13,14 +13,14 @@ var AppComponent = () => {
   document.body.className = "";
   document.body.appendChild(app);
 
-    let drawerEl = document.querySelector('.mdc-temporary-drawer');
-    let drawer = new MDCTemporaryDrawer(drawerEl);
-    let menu = document.querySelector('.menu');
-    menu.addEventListener('click', () => drawer.open = !drawer.open);
+  let drawerEl = document.querySelector('.mdc-temporary-drawer');
+  let drawer = new MDCTemporaryDrawer(drawerEl);
+  let menu = document.querySelector('.menu');
+  menu.addEventListener('click', () => drawer.open = !drawer.open);
 
-    //event hooks
-    drawerEl.addEventListener('MDCTemporaryDrawer:open', () => console.log('Received MDCPersistentDrawer:open'));
-    drawerEl.addEventListener('MDCTemporaryDrawer:close', () => console.log('Received MDCPersistentDrawer:close'));
+  //event hooks
+  drawerEl.addEventListener('MDCTemporaryDrawer:open', () => console.log('Received MDCPersistentDrawer:open'));
+  drawerEl.addEventListener('MDCTemporaryDrawer:close', () => console.log('Received MDCPersistentDrawer:close'));
 }
 
 AppComponent();
