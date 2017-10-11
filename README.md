@@ -4,20 +4,23 @@ This is a seed project for building a dynamic website using [webpack](https://we
 
 ## Principle Concepts
 
+-support the last two versions of browsers
 -small file footprint
 -fast loading speed
 -multi page to simplify SEO
 -centralized configurable json for site configuration
--easily to update content
+-easy to update content
 -themeable
+-self building menu
+-reusable
 
-## Dependencies
+## Developer Dependencies
 
 This is an npm package that relies on you having [nodejs with npm](https://nodejs.org) and [git](https://git-scm.com/) installed. Dont forget to configure your machine to be able to clone from github using [http](https://help.github.com/articles/cloning-a-repository/) or [ssh](https://help.github.com/articles/connecting-to-github-with-ssh/) and understand the [difference in using http or ssh](https://help.github.com/articles/which-remote-url-should-i-use/).
 
 ## Install
 
-In the node command prompt navigate to a folder you want to clone the repo into. Clone the repo with `git clone <prefered repo link> <optional repo name>` to download the repo into a folder name material-handlebars or the optional repo name you chose when cloning. Then, `cd <material-handlebars or optional repo name>` to move into the repository folder. To install the dependencies just `npm i`.
+In the node command prompt navigate to a folder you want to clone the repo into. Clone the repo with `git clone <prefered repo link> <optional repo name>` to download the repo into a folder named dgc or the optional repo name you chose when cloning. Then, `cd <dgc or optional repo name>` to move into the repository folder. To install the dependencies just `npm i`.
 
 ## Build
 
