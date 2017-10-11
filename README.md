@@ -1,18 +1,18 @@
 # Diversity Group Consulting
 
-This is a seed project for building a dynamic website using [webpack](https://webpack.js.org/), [handlebars](http://handlebarsjs.com/), and [material-components-web](https://github.com/material-components/material-components-web). The root purpose for this repo is to provide a central location for development on the DGC website. The foundation for this repo was forked from the seed project [material-handlebars](https://github.com/thebaron24/material-handlebars) and customized to meet certian principle concepts.
+This is a seed project for building a dynamic website using [webpack](https://webpack.js.org/), [handlebars](http://handlebarsjs.com/), and [material-components-web](https://github.com/material-components/material-components-web). The root purpose for this repo is to provide a central location for development on the DGC website. The foundation for this repo was forked from the seed project [material-handlebars](https://github.com/thebaron24/material-handlebars) and customized to meet certain principle concepts.
 
 ## Principle Concepts
 
--support the last two versions of browsers
--small file footprint
--fast loading speed
--multi page to simplify SEO
--centralized configurable json for site configuration
--easy to update content
--themeable
--self building menu
--reusable
+1. support the last two versions of browsers
+2. small file footprint
+3. fast loading speed
+4. multi page to simplify SEO
+5. centralized configurable json for site configuration
+6. easy to update content
+7. themeable
+8. self building menu
+9. reusable
 
 ## Developer Dependencies
 
