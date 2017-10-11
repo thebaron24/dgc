@@ -13,16 +13,118 @@
 				"element": "a",
 				"class": "mdc-list-item"
 			},
-			"content": [
+			"gridItems": [
 				{
-					"element": "h1",
-					"class": "mdc-typography--display1",
-					"text": "Diversity Group Consulting"
+					"element": "div",
+					"class": "mdc-layout-grid__cell mdc-layout-grid__cell--span-12",
+					"content": [
+						{
+							"element": "h1",
+							"class": "mdc-typography--display1",
+							"text": "Diversity Group Consulting"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
 				},
 				{
-					"element": "p",
-					"class": "mdc-typography--body1",
-					"text": "Webpack material scaffolding is working as expected"
+					"element": "div",
+					"class": "mdc-layout-grid__cell",
+					"content": [
+						{
+							"element": "h2",
+							"class": "mdc-typography--headline",
+							"text": "Diversity Group Consulting"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
+				},
+				{
+					"element": "div",
+					"class": "mdc-layout-grid__cell",
+					"content": [
+						{
+							"element": "h2",
+							"class": "mdc-typography--headline",
+							"text": "Diversity Group Consulting"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
+				},
+				{
+					"element": "div",
+					"class": "mdc-layout-grid__cell",
+					"content": [
+						{
+							"element": "h2",
+							"class": "mdc-typography--headline",
+							"text": "Diversity Group Consulting"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
+				},
+				{
+					"element": "div",
+					"class": "mdc-layout-grid__cell mdc-layout-grid__cell--span-6",
+					"content": [
+						{
+							"element": "h2",
+							"class": "mdc-typography--headline",
+							"text": "Diversity Group Consulting"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
+				},
+				{
+					"element": "div",
+					"class": "mdc-layout-grid__cell mdc-layout-grid__cell--span-6",
+					"content": [
+						{
+							"element": "h2",
+							"class": "mdc-typography--headline",
+							"text": "Diversity Group Consulting"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
+				},
+				{
+					"element": "div",
+					"class": "mdc-layout-grid__cell mdc-layout-grid__cell--span-12",
+					"content": [
+						{
+							"element": "h2",
+							"class": "mdc-typography--headline",
+							"text": "Diversity Group Consulting"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
 				}
 			]
 		},
@@ -36,16 +138,70 @@
 				"element": "a",
 				"class": "mdc-list-item"
 			},
-			"content": [
+			"gridItems": [
 				{
-					"element": "h1",
-					"class": "mdc-typography--display1",
-					"text": "Contact us for more information"
+					"element": "div",
+					"class": "mdc-layout-grid__cell mdc-layout-grid__cell--span-12",
+					"content": [
+						{
+							"element": "h1",
+							"class": "mdc-typography--display1",
+							"text": "Contact Page"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
 				},
 				{
-					"element": "p",
-					"class": "mdc-typography--body1",
-					"text": "Contact information here"
+					"element": "div",
+					"class": "mdc-layout-grid__cell",
+					"content": [
+						{
+							"element": "h1",
+							"class": "mdc-typography--display1",
+							"text": "Contact Page"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
+				},
+				{
+					"element": "div",
+					"class": "mdc-layout-grid__cell",
+					"content": [
+						{
+							"element": "h1",
+							"class": "mdc-typography--display1",
+							"text": "Contact Page"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
+				},
+				{
+					"element": "div",
+					"class": "mdc-layout-grid__cell",
+					"content": [
+						{
+							"element": "h1",
+							"class": "mdc-typography--display1",
+							"text": "Contact Page"
+						},
+						{
+							"element": "p",
+							"class": "mdc-typography--body1",
+							"text": "Webpack material scaffolding is working as expected"
+						}
+					]
 				}
 			]
 		}

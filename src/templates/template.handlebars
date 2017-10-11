@@ -1,9 +1,29 @@
-<aside class="mdc-temporary-drawer mdc-typography">
-  <nav class="mdc-temporary-drawer__drawer">
+<header class="header-toolbar mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible mdc-toolbar--flexible-space-maximized">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      {{!-- <a href="#" class="material-icons mdc-toolbar__icon--menu">menu</a> --}}
+      <button class="menu material-icons mdc-toolbar__icon--menu">{{this.menuIcon}}</button>
+      {{!-- <span class="mdc-toolbar__title">{{this.site}}</span> --}}
+    </section>
+    <section class="mdc-toolbar__section">
+      {{!-- <a href="#" class="material-icons mdc-toolbar__icon--menu">menu</a> --}}
+      {{!-- <button class="menu material-icons mdc-toolbar__icon--menu">{{this.menuIcon}}</button> --}}
+      <span class="mdc-toolbar__title">{{this.site}}</span>
+      {{!-- <img class="responsive-image" src="http://diversitygroupconsult.com/images/logo.png"> --}}
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+      {{!-- <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
+      <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Print this page" alt="Print this page">print</a>
+      <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a> --}}
+    </section>
+  </div>
+</header>
 
-    <header class="mdc-temporary-drawer__header">
+<aside class="mdc-temporary-drawer mdc-typography">
+  <nav class="mdc-temporary-drawer__drawer mdc-theme--primary-bg">
+    <header class="mdc-temporary-drawer__header mdc-theme--background">
       <div class="mdc-temporary-drawer__header-content">
-        Header here
+        <img class="responsive-image" src="http://diversitygroupconsult.com/images/logo.png">
       </div>
     </header>
 
@@ -16,114 +36,28 @@
           </{{this.menu.element}}>
         {{/each}}
       </nav>
-
-      <hr class="mdc-list-divider">
-
+      {{!-- <hr class="mdc-list-divider"> --}}
     </div>
-
   </nav>
 </aside>
 
-<section>
-
-  <header class="mdc-toolbar mdc-toolbar--fixed">
-    <div class="mdc-toolbar__row">
-      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-        <button class="menu material-icons mdc-toolbar__icon--menu">{{this.menuIcon}}</button>
-        <span class="mdc-toolbar__title">{{this.site}}</span>
-      </section>
+<main>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      {{#each this.pages.index.gridItems}}
+        <{{this.element}} class="{{this.class}}">
+          <!-- grid item -->
+          <article>
+            {{#each this.content}}
+              {{!-- Key: {{@key}} --}}
+              <{{this.element}} class="{{this.class}}">
+                {{this.text}}
+              </{{this.element}}>
+            {{/each}}
+          </article>
+          <!-- end grid item -->
+        </{{this.element}}>
+      {{/each}}
     </div>
-  </header>
-
-  <main class="mdc-toolbar-fixed-adjust">
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <div class="mdc-card mdc-card--theme-dark">
-            <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-              <h2 class="mdc-card__subtitle">Subtitle here</h2>
-            </section>
-            <section class="mdc-card__actions">
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
-            </section>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell">
-          <div class="mdc-card mdc-card--theme-dark">
-            <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-              <h2 class="mdc-card__subtitle">Subtitle here</h2>
-            </section>
-            <section class="mdc-card__actions">
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
-            </section>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell">
-          <div class="mdc-card mdc-card--theme-dark">
-            <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-              <h2 class="mdc-card__subtitle">Subtitle here</h2>
-            </section>
-            <section class="mdc-card__actions">
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
-            </section>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell">
-          <div class="mdc-card mdc-card--theme-dark">
-            <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-              <h2 class="mdc-card__subtitle">Subtitle here</h2>
-            </section>
-            <section class="mdc-card__actions">
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
-            </section>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell">
-          <div class="mdc-card mdc-card--theme-dark">
-            <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-              <h2 class="mdc-card__subtitle">Subtitle here</h2>
-            </section>
-            <section class="mdc-card__actions">
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
-            </section>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell">
-          <div class="mdc-card mdc-card--theme-dark">
-            <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-              <h2 class="mdc-card__subtitle">Subtitle here</h2>
-            </section>
-            <section class="mdc-card__actions">
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
-            </section>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell">
-          <div class="mdc-card mdc-card--theme-dark">
-            <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-              <h2 class="mdc-card__subtitle">Subtitle here</h2>
-            </section>
-            <section class="mdc-card__actions">
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 1</button>
-              <button class="mdc-button mdc-button--theme-dark mdc-button--compact mdc-card__action">Action 2</button>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  
-</section>
+  </div>
+</main>
