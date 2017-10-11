@@ -22,34 +22,27 @@ var AppComponent = () => {
   let menu = document.querySelector('.menu');
   menu.addEventListener('click', () => drawer.open = !drawer.open);
 
-  // var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
-  // toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
-
   //event hooks
   drawerEl.addEventListener('MDCTemporaryDrawer:open', () => console.log('Received MDCPersistentDrawer:open'));
   drawerEl.addEventListener('MDCTemporaryDrawer:close', () => console.log('Received MDCPersistentDrawer:close'));
 
+  var pollId = 0;
+  pollId = setInterval(function() {
+    var pos = getComputedStyle(document.querySelector('.mdc-toolbar')).position;
+    if (pos === 'fixed' || pos === 'relative') {
+      init();
+      clearInterval(pollId);
+    }
+  }, 250);
 
-
-        var pollId = 0;
-        pollId = setInterval(function() {
-          var pos = getComputedStyle(document.querySelector('.mdc-toolbar')).position;
-          if (pos === 'fixed' || pos === 'relative') {
-            init();
-            clearInterval(pollId);
-          }
-        }, 250);
-        function init() {
-          // var ratioSpan = document.querySelector("#ratio");
-          var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
-          toolbar.listen('MDCToolbar:change', function(evt) {
-            var flexibleExpansionRatio = evt.detail.flexibleExpansionRatio;
-            // ratioSpan.innerHTML = flexibleExpansionRatio.toFixed(2);
-          });
-          toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
-        }
+  function init() {
+    var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+    toolbar.listen('MDCToolbar:change', function(evt) {
+      var flexibleExpansionRatio = evt.detail.flexibleExpansionRatio;
+    });
+    toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+  }
   
-
 }
 
 AppComponent();
