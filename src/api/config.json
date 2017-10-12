@@ -1,7 +1,11 @@
 {
-	"site": "Web Page",
+	"site": "Diversity Group",
 	"menuIcon": "menu",
 	"location" : "index",
+	"theme": {
+		"primary": "#2980B9",
+		"secondary": "#d9edf7"
+	},
 	"pages": {
 		"index": {
 			"title": "Page Title",
@@ -21,11 +25,11 @@
 						{
 							"element": "h1",
 							"class": "mdc-typography--display1",
-							"text": "Web Page Content Title"
+							"text": "Diversity Group Consulting"
 						},
 						{
-							"element": "p",
-							"class": "mdc-typography--body1",
+							"element": "h2",
+							"class": "mdc-typography--subheading2",
 							"text": "Webpack material scaffolding is working as expected"
 						},
 						{

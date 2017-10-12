@@ -2,7 +2,7 @@ var path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+// const Config = require("./src/api/config.json");
 const webpack = require("webpack");
 
 module.exports = {
@@ -56,6 +56,7 @@ module.exports = {
 					]
 				})
 			},
+			{	test: /\.hbs$/, loader: "handlebars-loader" },
 			{	test: /\.handlebars$/, loader: "handlebars-loader" },
 			{
 			    test: /\.js$/,
@@ -94,7 +95,7 @@ module.exports = {
 			allChunks: true
 		}),
 		new HtmlWebpackPlugin({
-			title: 'Webpack Scaffolding Developer'
+			template: 'src/html.js'
 		})
 	],
 	devServer: {

@@ -109,7 +109,7 @@ module.exports = {
       		comments: false
     	}),
 		new HtmlWebpackPlugin({
-			title: 'Webpack Scaffolding Production'
+			template: 'src/index.hbs'
 		})
 	],
 	devServer: {

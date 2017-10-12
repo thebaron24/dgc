@@ -1,6 +1,6 @@
 import styles from 'styles';
 import * as mdc from 'material-components-web';
-import Template from './templates/template.handlebars';
+import Template from 'template.hbs';
 import config from './api/config.json';
 
 var app;
