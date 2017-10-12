@@ -55,6 +55,7 @@ module.exports = {
 					]
 				})
 			},
+			{	test: /\.hbs$/, loader: "handlebars-loader" },
 			{	test: /\.handlebars$/, loader: "handlebars-loader" },
 			{
 			    test: /\.js$/,
@@ -109,7 +110,7 @@ module.exports = {
       		comments: false
     	}),
 		new HtmlWebpackPlugin({
-			template: 'src/index.hbs'
+			template: 'src/html.js'
 		})
 	],
 	devServer: {
